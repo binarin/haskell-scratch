@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a3d36ebe43d60f03ee3135778e98490f4a8c36ceb1fe2f06f997b2ca8c76dc33
+-- hash: 5f22068d00ba9fa6fbffeaa0bb20ac8a1f2b8008b85d0ea93cb5271cb752578b
 
 name:           haskell-scratch
 version:        0.1.0.0
@@ -16,15 +16,18 @@ license-file:   LICENSE
 build-type:     Simple
 cabal-version:  >= 1.10
 
-extra-source-files:
-    README.md
-
 executable haskell-scratch
   main-is: Main.hs
   other-modules:
       Paths_haskell_scratch
   hs-source-dirs:
       src
+  default-extensions: DataKinds GADTs KindSignatures TypeFamilies TypeOperators FlexibleInstances FlexibleContexts PolyKinds TypeApplications ScopedTypeVariables
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , text
+    , unordered-containers
+    , vector
   default-language: Haskell2010

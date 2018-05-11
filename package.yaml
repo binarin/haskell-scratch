@@ -8,11 +8,26 @@ author:              Author name here
 maintainer:          example@example.com
 copyright:           2018 Author name here
 category:            Web
-extra-source-files:
-- README.md
+
+default-extensions:
+  - DataKinds
+  - GADTs
+  - KindSignatures
+  - TypeFamilies
+  - TypeOperators
+  - FlexibleInstances
+  - FlexibleContexts
+  - PolyKinds
+  - TypeApplications
+  - ScopedTypeVariables
 
 dependencies:
   - base >= 4.7 && < 5
+  - aeson
+  - vector
+  - unordered-containers
+  - text
+  - bytestring
 
 executables:
   haskell-scratch:
