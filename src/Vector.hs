@@ -99,6 +99,14 @@ replicate :: SNat n -> a -> Vector a n
 replicate SZ _ = Nil
 replicate (SS n) a = a :- replicate n a
 
+-- data BTree a where
+--   Leaf :: a -> BTree a
+--   Node :: BTree a -> BTree b -> BTree (a, b)
+
+-- data STree a where
+--   SLeaf :: STree ('Leaf a)
+--   SNode :: STree a -> STree b -> STree ('Node a b)
+
 main :: IO ()
 main = do
   print $ head (1 :- 2 :- Nil)
