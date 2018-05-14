@@ -7,7 +7,7 @@
 {-# LANGUAGE DataKinds, TypeFamilies, TypeOperators, UndecidableInstances, GADTs, StandaloneDeriving #-}
 
 module Vector where
-import Prelude hiding (head, tail, map, init, last, zipWith)
+import Prelude hiding (head, tail, map, init, last, zipWith, replicate)
 
 data Nat = Z | S Nat
 
@@ -94,6 +94,10 @@ zipWith :: (a -> b -> c) -> Vector a n -> Vector b m -> Vector c (Min n m)
 zipWith _ Nil _ = Nil
 zipWith _ _ Nil = Nil
 zipWith f (a :- as) (b :- bs) = f a b :- zipWith f as bs
+
+replicate :: SNat n -> a -> Vector a n
+replicate SZ _ = Nil
+replicate (SS n) a = a :- replicate n a
 
 main :: IO ()
 main = do
