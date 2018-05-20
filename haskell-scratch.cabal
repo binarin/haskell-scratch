@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5f22068d00ba9fa6fbffeaa0bb20ac8a1f2b8008b85d0ea93cb5271cb752578b
+-- hash: ef80ba6e7047fc120ef07de3b2ad098980983246ffab9b4e1c8bc3d64f53d25c
 
 name:           haskell-scratch
 version:        0.1.0.0
@@ -19,6 +19,8 @@ cabal-version:  >= 1.10
 executable haskell-scratch
   main-is: Main.hs
   other-modules:
+      GADTs
+      HList
       Paths_haskell_scratch
   hs-source-dirs:
       src
@@ -27,6 +29,7 @@ executable haskell-scratch
       aeson
     , base >=4.7 && <5
     , bytestring
+    , containers
     , text
     , unordered-containers
     , vector
