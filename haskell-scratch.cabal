@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ef80ba6e7047fc120ef07de3b2ad098980983246ffab9b4e1c8bc3d64f53d25c
+-- hash: 450eaf9569225052c5108f0b21c892431de912c368e2422e9df4ff60a07af645
 
 name:           haskell-scratch
 version:        0.1.0.0
@@ -21,15 +21,19 @@ executable haskell-scratch
   other-modules:
       GADTs
       HList
+      LeftistHeap
+      Vector
       Paths_haskell_scratch
   hs-source-dirs:
       src
   default-extensions: DataKinds GADTs KindSignatures TypeFamilies TypeOperators FlexibleInstances FlexibleContexts PolyKinds TypeApplications ScopedTypeVariables
   build-depends:
-      aeson
+      QuickCheck
+    , aeson
     , base >=4.7 && <5
     , bytestring
     , containers
+    , hspec
     , text
     , unordered-containers
     , vector
