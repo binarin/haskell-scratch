@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 450eaf9569225052c5108f0b21c892431de912c368e2422e9df4ff60a07af645
+-- hash: e2fb6df65c6716f9d7a20008bacf379770f37fa1a4e2f8ff4868467f98fe8a39
 
 name:           haskell-scratch
 version:        0.1.0.0
@@ -30,6 +30,7 @@ executable haskell-scratch
   build-depends:
       QuickCheck
     , aeson
+    , array
     , base >=4.7 && <5
     , bytestring
     , containers
