@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e2fb6df65c6716f9d7a20008bacf379770f37fa1a4e2f8ff4868467f98fe8a39
+-- hash: 0b147451484f8f4c710d38e68a9463323b499655e6e5ae1cd46b16bcf3ccc7f7
 
 name:           haskell-scratch
 version:        0.1.0.0
@@ -26,7 +26,7 @@ executable haskell-scratch
       Paths_haskell_scratch
   hs-source-dirs:
       src
-  default-extensions: DataKinds GADTs KindSignatures TypeFamilies TypeOperators FlexibleInstances FlexibleContexts PolyKinds TypeApplications ScopedTypeVariables
+  default-extensions: DataKinds MultiParamTypeClasses GADTs KindSignatures TypeFamilies TypeOperators FlexibleInstances FlexibleContexts PolyKinds TypeApplications ScopedTypeVariables
   build-depends:
       QuickCheck
     , aeson
@@ -34,8 +34,15 @@ executable haskell-scratch
     , base >=4.7 && <5
     , bytestring
     , containers
+    , gitlib
+    , hlibgit2
     , hspec
+    , optparse-applicative
+    , optparse-text
+    , process
+    , process-extras
     , text
     , unordered-containers
     , vector
+    , zlib
   default-language: Haskell2010

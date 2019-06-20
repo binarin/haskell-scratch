@@ -11,6 +11,7 @@ category:            Web
 
 default-extensions:
   - DataKinds
+  - MultiParamTypeClasses
   - GADTs
   - KindSignatures
   - TypeFamilies
@@ -32,6 +33,13 @@ dependencies:
   - bytestring
   - hspec
   - QuickCheck
+  - zlib
+  - hlibgit2
+  - gitlib
+  - optparse-applicative
+  - optparse-text
+  - process
+  - process-extras
 
 executables:
   haskell-scratch:
